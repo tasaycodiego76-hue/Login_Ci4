@@ -1,7 +1,8 @@
 <?php
  
  namespace App\Models;
- Use Codeigniter\Model;
+
+ Use CodeIgniter\Model;
 
  class UsuarioModel extends Model{
 
@@ -17,7 +18,7 @@
   public function verificarCredenciales(string $usuario, string $clave): ?object
 
   {
-    $row = $this->where('nombreusuario', $usuario)->firts();
+    $row = $this->where('nombreusuario', $usuario)->first();
 
     if($row && password_verify($clave, $row->claveacceso)){
         //acceso correcto

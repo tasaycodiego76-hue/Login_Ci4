@@ -3,9 +3,8 @@ namespace App\Controllers;
 
 use App\Models\UsuarioModel;
 use CodeIgniter\Controller;
-use App\Controllers\BaseController;
 
-class AuthController extends BaseController{
+class AuthController extends Controller{
 
 
 public function login(){
