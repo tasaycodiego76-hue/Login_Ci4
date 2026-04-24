@@ -9,9 +9,9 @@
 
   protected $table = 'usuarios';
   protected $primaryKey = 'id';
-  protected $return = 'object';
+  protected $returnType = 'object';
 
-  protected $allowdFields = ['nombreusuario','claveacceso','nivelacceso'];
+  protected $allowedFields = ['nombreusuario','claveacceso','nivelacceso'];
 
   
   

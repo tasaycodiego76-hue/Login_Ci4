@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-md-6 mx-auto">
                 <h3>Login</h3>
-                <h5>Iniciar Sesion en la Aplicaicon</h5>
+                <h5>Iniciar Sesion en la Aplicacion</h5>
                 <form action="<?= base_url('auth/login')?>" method="post">
                     <?= csrf_field()?>
                     <div class="mb-2">
@@ -32,9 +32,11 @@
                 <?php endif; ?>
                 <?php if (session()->getFlashdata('errors')): ?>
                 <div class="alert alert-danger">
-                    <?php foreach(session()->getFlashdata('errors') as $error): ?>
-                        <?= $error?>
-                    <?php endforeach; ?>
+                    <ul class="mb-0">
+                        <?php foreach(session()->getFlashdata('errors') as $error): ?>
+                            <li><?= $error?></li>
+                        <?php endforeach; ?>
+                    </ul>
                 </div>
                 <?php endif; ?>
                 <?php if (session()->getFlashdata('info')): ?>

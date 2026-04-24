@@ -1,12 +1,11 @@
 <?php
-namespace App\Controllers\Admin;
+namespace App\Controllers\Invitado; 
 
 use CodeIgniter\Controller;
 
-
-class DashboardController extends Controller{
-    public function index(){
+class PanelController extends Controller {  
+    public function index() {
         $data['titulo'] = 'Panel de Invitado';
-        return view('admin/controller', $data);
+        return view('invitado/panel', $data);
     }
 }
